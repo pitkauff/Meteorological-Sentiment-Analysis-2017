@@ -12,9 +12,8 @@ import datetime
 
 json = import_simplejson()
 
-auth1 = tweepy.auth.OAuthHandler('EeN161Gk3RqJAQd8zrimPckkF', '0wACEZgYxCoSzMuTa22LdZSfrTWo2BCfsnU6ggK7keeEcQXDqf')
-auth1.set_access_token('2847047537-7vEFDI9rFnEb2h4HmiAJoxSglfurC57XNFTJamr',
-                       '54CTHM5XeBYEsyogP6m2EijRUeLW0mTBaPxjMkiAMmyIf')
+auth1 = tweepy.auth.OAuthHandler('', '')
+auth1.set_access_token('', '')
 api = tweepy.API(auth1)
 
 
