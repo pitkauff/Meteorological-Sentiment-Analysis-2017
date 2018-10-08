@@ -15,7 +15,7 @@ In order for the code to run at all outside of PyCharm run the following command
 
 **Script Overview**
 
-- [Collect](https://github.com/pitkauff/Meteorological-Sentiment-Analysis-2017/tree/master/scripts/collect): These scripts were used to stream live tweets and save them to a mongodb database using teh [pymongo API](https://api.mongodb.com/python/current/)
+- [Collect](https://github.com/pitkauff/Meteorological-Sentiment-Analysis-2017/tree/master/scripts/collect): These scripts were used to stream live tweets and save them to a mongodb database using the [pymongo API](https://api.mongodb.com/python/current/).
 - [RedditSearch](https://github.com/pitkauff/Meteorological-Sentiment-Analysis-2017/tree/master/scripts/redditSearch): These scripts were used to stream reddit data.
-- [Enrich](https://github.com/pitkauff/Meteorological-Sentiment-Analysis-2017/blob/master/scripts/enrich/enrichData.py): This script was used to add weather and sentiment to the twitter / Reddit data
+- [Enrich](https://github.com/pitkauff/Meteorological-Sentiment-Analysis-2017/blob/master/scripts/enrich/enrichData.py): This script was used to add weather and sentiment to the twitter / Reddit data.
 - [Learn](https://github.com/pitkauff/Meteorological-Sentiment-Analysis-2017/tree/master/scripts/learn): This folder includes all regression algorithms that were used in order to predict sentiment based on weather data.
