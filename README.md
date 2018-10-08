@@ -15,7 +15,7 @@ export PYTHONPATH="${PYTHONPATH}:/<path_to_project_root>
 
 **Script Overview**
 
-- [Collect](https://github.com/pitkauff/Meteorological-Sentiment-Analysis-2017/tree/master/scripts/collect): These scripts were used to 
+- [Collect](https://github.com/pitkauff/Meteorological-Sentiment-Analysis-2017/tree/master/scripts/collect): These scripts were used to stream live tweets and save them to a mongodb database using teh [pymongo API](https://api.mongodb.com/python/current/)
 
     
 
