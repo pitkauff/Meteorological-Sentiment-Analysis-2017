@@ -1,13 +1,19 @@
 # Twitter Sentiment Analysis
 
+This project was part of COMS 6998 - Projects in Data Sciene at Columbia.
 
+**Problem Statement**
 
-How to use this code:
+The purpose of this project was to apply some form of machine learning on streaming data. We decided to investigate whether or not weather patterns have any influence on overall social media sentiment, as expressed through Twitter and Buzzfeed.
+
+**How to use this code**
 
 CHANGE YOUR PYTHONPATH
 We ran this project through PyCharm, which uses absolute paths from the root directory of our project.
 In order for the code to run at all outside of PyCharm run the following command:
 export PYTHONPATH="${PYTHONPATH}:/<path_to_project_root>
+
+
 ____________
 Collect
 ____________
