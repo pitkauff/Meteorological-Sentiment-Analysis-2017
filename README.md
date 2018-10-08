@@ -13,15 +13,11 @@ We ran this project through PyCharm, which uses absolute paths from the root dir
 In order for the code to run at all outside of PyCharm run the following command:
 export PYTHONPATH="${PYTHONPATH}:/<path_to_project_root>
 
+**Script Overview**
 
-____________
-Collect
-____________
+- [Collect](https://github.com/pitkauff/Meteorological-Sentiment-Analysis-2017/tree/master/scripts/collect): These scripts were used to 
 
-To collect twitter data we used the saveTweets function in twitterAPI.py
-
-An example of this can be found in twitter/denver.py
-(Information on the places we used can be found in data/places.json)
+    
 
 ____________
 
