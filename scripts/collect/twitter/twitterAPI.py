@@ -46,7 +46,6 @@ class StreamListener(tweepy.StreamListener):
                and 'en' in userLanguage \
                and isRetweet is False \
                and body is not None \
-            # and len(urls) == 0
 
     def printTweetDetails(self, body, place):
         print ''
@@ -118,9 +117,6 @@ def saveTweets(numTweets, mongoCollectionName, locationCoordinates, locationName
                 time.sleep(30)
     except TweetLimitReachedException, (e):
         print str(e)
-
-
-
 
 def getPlaceID(placeName):
     places = api.geo_search(query=placeName, granularity="city")
