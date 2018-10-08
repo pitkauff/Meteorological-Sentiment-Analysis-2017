@@ -1,12 +1,10 @@
 timesearch
 ==========
 
-I don't have a test suite. You're my test suite! Messages go to [/u/GoldenSights](https://reddit.com/u/GoldenSights).
-
 Timesearch is a collection of utilities for archiving subreddits.
 
 ### Make sure you have:
-- Installed [Python](https://www.python.org/download). I use Python 3.6.
+- Installed [Python](https://www.python.org/download).
 - Installed PRAW >= 4, as well as the other modules in `requirements.txt`. Try `pip install -r requirements.txt` to get them all.
 - Created an OAuth app at https://reddit.com/prefs/apps. Make it `script` type, and set the redirect URI to `http://localhost:8080`. The title and description can be anything you want, and the about URL is not required.
 - Used [this PRAW script](https://praw.readthedocs.io/en/latest/tutorials/refresh_token.html) to generate a refresh token. Just save it as a .py file somewhere and run it through your terminal / command line. For simplicity's sake, I just choose `all` for the scopes.
@@ -52,63 +50,3 @@ Timesearch is a collection of utilities for archiving subreddits.
 ### To use it
 
 You will need both the `timesearch` package (folder) and the external `timesearch.py` file. You can click the green "Clone or Download" button in the upper right. When you run the .py file, it sends your commandline arguments into the package. You can view a summarized version of all the help text with just `timesearch.py`, or you can view a specific docstring with `timesearch.py livestream`, etc.
-
-I recommend [sqlitebrowser](https://github.com/sqlitebrowser/sqlitebrowser/releases) if you want to inspect the database yourself.
-
-### Changelog
-- 2017 11 13
-    - Gave timesearch its own Github repository so that (1) it will be easier for people to download it and (2) it has a cleaner, more independent URL. [voussoir/timesearch](https://github.com/voussoir/timesearch)
-
-- 2017 11 05
-    - Added a try-except inside livestream helper to prevent generator from terminating.
-
-- 2017 11 04
-    - For timesearch, I switched from using my custom cloudsearch iterator to the one that comes with PRAW4+.
-
-- 2017 10 12
-    - Added the `mergedb` utility for combining databases.
-
-- 2017 06 02
-    - You can use `commentaugment -s abcdef` to get a particular thread even if you haven't scraped anything else from that subreddit. Previously `-s` only worked if the database already existed and you specified it via `-r`. Now it is inferred from the submission itself.
-
-- 2017 04 28
-    - Complete restructure into package, started using PRAW4.
-
-- 2016 08 10
-    - Started merging redmash and wrote its argparser
-
-- 2016 07 03
-    - Improved docstring clarity.
-
-- 2016 07 02
-    - Added `livestream` argparse
-
-- 2016 06 07
-    - Offline_reading has been merged with the main timesearch file
-    - `get_all_posts` renamed to `timesearch`
-    - Timesearch parameter `usermode` renamed to `username`; `maxupper` renamed to `upper`.
-    - Everything now accessible via commandline arguments. Read the docstring at the top of the file.
-
-- 2016 06 05
-    - NEW DATABASE SCHEME. Submissions and comments now live in different tables like they should have all along. Submission table has two new columns for a little bit of commentaugment metadata. This allows commentaugment to only scan threads that are new.
-    - You can use the `migrate_20160605.py` script to convert old databases into new ones.
-
-- 2015 11 11
-    - created `offline_reading.py` which converts a timesearch database into a comment tree that can be rendered into HTML
-
-- 2015 09 07
-    - fixed bug which allowed `livestream` to crash because `bot.refresh()` was outside of the try-catch.
-
-- 2015 08 19
-    - fixed bug in which updatescores stopped iterating early if you had more than 100 comments in a row in the db
-    - commentaugment has been completely merged into the timesearch.py file. you can use commentaugment_prompt() to input the parameters, or use the commentaugment() function directly.
-
-
-____
-
-
-I want to live in a future where everyone uses UTC and agrees on daylight savings.
-
-<p align="center">
-    <img src="https://github.com/voussoir/reddit/blob/master/.GitImages/timesearch_logo_256.png?raw=true" alt="Timesearch"/>
-</p>
